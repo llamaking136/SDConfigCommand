@@ -61,13 +61,13 @@ class SDConfigCommand {
     File cFile;
     char filename[13];
     int cs; // chip select pin
-    char cmd[CMD_SIZE]="";
-    char value[VALUE_SIZE]="";
+    char cmd[CMD_SIZE] = "";
+    char value[VALUE_SIZE] = "";
     
-    bool readMode=READ_CMD;
-    bool commentMode=false;
+    bool readMode = READ_CMD;
+    bool commentMode = false;
     
-    bool openFile(File &myFile, char* myFilename, byte rw);
+    bool openFile(File &myFile, char* myFilename, char rw);
     bool parseFile();
     void callbackSequence();
     bool writeCmdValue(char myChar);
